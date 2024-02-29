@@ -10,7 +10,6 @@ Future getData(String url) async {
   http.Response response = await http.get(url as Uri);
   return jsonDecode(response.body);
 }
-
 uploadImage(File imageFile,String url) async
 { 
     String base64Image=base64Encode(imageFile.readAsBytesSync());
